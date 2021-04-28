@@ -5,18 +5,18 @@ import { merge } from 'webpack-merge';
 
 import common from './webpack.common.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = dirname(fileURLToPath(import.meta.url)); // eslint-disable-line no-underscore-dangle
 
 export default merge(common, {
-  mode: "development",
-  devtool: "source-map",
+  mode: 'development',
+  devtool: 'source-map',
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "dist"),
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: '[name][ext]',
   },
   devServer: {
-    contentBase: "./dist",
+    contentBase: './dist',
     open: true,
 
     // makes server accessible externally via `your-ip:8080`
@@ -27,11 +27,11 @@ export default merge(common, {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
