@@ -24,7 +24,14 @@ export default merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
+      },
+      {
+        test: /\.css$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -36,7 +43,7 @@ export default merge(common, {
         ],
       },
       {
-        test: /\.s[ac]ss$/,
+        test: /\.s[ac]ss$/i,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -57,6 +64,7 @@ export default merge(common, {
     new CleanWebpackPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
+      openAnalyzer: false,
     }),
   ],
   optimization: {

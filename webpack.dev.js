@@ -10,6 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url)); // eslint-disable-lin
 export default merge(common, {
   mode: 'development',
   devtool: 'source-map',
+  target: 'web',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),

@@ -13,11 +13,11 @@ export default {
         loader: 'html-loader',
       },
       {
-        test: /\.(png|jpe?g|gif)$/,
+        test: /\.(png|jpe?g|gif)$/i,
         type: 'asset/resource', // emits a separate file (replaced file-loader)
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/i,
         type: 'asset/inline', // inserts inline (replaced url-loader)
       },
     ],

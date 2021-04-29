@@ -3,6 +3,7 @@
 // Note that ESLint does not support ESM configuration at this time
 
 module.exports = {
+  parser: '@babel/eslint-parser',
   env: {
     browser: true,
     es2021: true,
