@@ -9,8 +9,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['airbnb-base', 'prettier', 'plugin:react/recommended'],
-  plugins: ['prettier'],
+  extends: [
+    'airbnb-base',
+    'prettier',
+    'plugin:react/recommended',
+    'plugin:jest/all',
+  ],
+  plugins: ['prettier', 'jest'],
   parserOptions: {
     ecmaVersion: 2021, // equivalent to 12
     sourceType: 'module',

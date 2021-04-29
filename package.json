@@ -10,7 +10,10 @@
   "scripts": {
     "start": "webpack serve --node-env development --config webpack.dev.js",
     "build": "webpack --node-env production --config webpack.prod.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-config": "npx eslint webpack.* *.cjs --ignore-pattern '!' --fix",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "keywords": [
     "starter",
@@ -34,15 +37,20 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-webpack-plugin": "^2.5.4",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "husky": "^6.0.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-runner-eslint": "^0.10.0",
     "lint-staged": "^10.5.4",
     "mini-css-extract-plugin": "^1.5.0",
     "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.2",
     "sass": "^1.32.11",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
