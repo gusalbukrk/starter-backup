@@ -2,6 +2,10 @@
   "name": "starter",
   "version": "0.0.1",
   "description": "Starter kit for JavaScript projects.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gusalbukrk/starter.git"
+  },
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --node-env development --config webpack.dev.js",
@@ -20,7 +24,9 @@
     "@babel/core": "^7.13.16",
     "@babel/eslint-parser": "^7.13.14",
     "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.12.0",
     "clean-webpack-plugin": "*",
     "css-loader": "^5.2.4",
     "css-minimizer-webpack-plugin": "^2.0.0",
@@ -29,6 +35,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-webpack-plugin": "^2.5.4",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
@@ -52,6 +59,9 @@
     "webpack-merge": "^5.7.3"
   },
   "dependencies": {
-    "core-js": "^3.11.1"
+    "core-js": "^3.11.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.3"
   }
 }

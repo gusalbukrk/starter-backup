@@ -9,7 +9,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['airbnb-base', 'prettier', 'plugin:react/recommended'],
   plugins: ['prettier'],
   parserOptions: {
     ecmaVersion: 2021, // equivalent to 12
@@ -22,6 +22,11 @@ module.exports = {
       'error',
       'always', // should be `always` when `"type": "module"`
     ],
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   overrides: [
     {
