@@ -9,7 +9,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.js$/i,
+        test: /\.(js|ts)x?$/i,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -34,6 +34,7 @@ export default {
       template: './src/index.html',
     }),
     new ESLintPlugin({
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
       fix: true,
     }),
     new StylelintPlugin({
