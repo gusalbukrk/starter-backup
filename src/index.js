@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import './reset.css';
 import './index.scss';
 
-import Header from './components/Header.js';
-import Subheader from './components/Subheader.js';
+import Header from './components/Header.tsx';
+import Subheader from './components/Subheader.jsx';
 
 console.log('from index');
 

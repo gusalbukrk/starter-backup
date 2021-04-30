@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Header.module.scss';
 
-function Header() {
+function Header(): JSX.Element {
   return <h1 className={styles.header}>Starter</h1>;
 }
 

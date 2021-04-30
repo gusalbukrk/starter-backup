@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import Subheader from './Subheader.js';
+import Subheader from './Subheader.jsx';
 
 describe('renders correctly', () => {
   it('header', () => {

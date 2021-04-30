@@ -9,6 +9,10 @@ export default {
   module: {
     rules: [
       {
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+      },
+      {
         test: /\.js$/i,
         exclude: /node_modules/,
         use: {
@@ -34,6 +38,7 @@ export default {
       template: './src/index.html',
     }),
     new ESLintPlugin({
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
       fix: true,
     }),
     new StylelintPlugin({
