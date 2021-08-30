@@ -17,7 +17,12 @@ export default merge(common, {
     assetModuleFilename: '[name][ext]',
   },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.join(__dirname, 'public'),
+    },
+    client: {
+      overlay: false,
+    },
     open: true,
 
     // makes server accessible externally via `your-ip:8080`
